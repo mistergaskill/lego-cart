@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 
-const catalogData = ['2x2 plate', '1x1 brick', '3x1 brick']
-    .map((x, i) => {
-        return {id: i, name: x}
-    });
+const catalogData = [
+    {id: 1, price: 15, name: '2x2 plate'},
+    {id: 2, price: 25, name: '1x1 brick'},
+    {id: 3, price: 30, name: '3x1 brick'},
+];
 
 function useCatalog() {
     const [catalog, setCatalog] = useState(null);

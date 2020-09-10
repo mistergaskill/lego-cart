@@ -1,8 +1,17 @@
 import React, { useContext } from 'react'
 import {CartContext} from '../contexts/CartContext'
+import './Cart.css';
 
 function CartItem(item) {
-  return (<div>{item.id} {item.name} x{item.count}</div>)
+  return (<div className="cartItem">
+    <button className="cartItemButton">Remove</button>
+    <span className="cartItemDescription">{item.name}</span>
+    <div className="cartItemCountWidget">
+      <button className="cartItemButton">-</button>
+      <button className="cartItemButton">+</button>
+      <div className="cartItemCount">{item.count}x</div>
+    </div>
+  </div>)
 }
 
 function Cart() {
@@ -14,4 +23,4 @@ function Cart() {
   </div>)
 }
 
-export default Cart
+export default Cart;

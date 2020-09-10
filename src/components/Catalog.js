@@ -1,13 +1,14 @@
 import React, {useContext} from 'react';
 import useCatalog from '../hooks/useCatalog';
 import { CartContext } from '../contexts/CartContext';
+import './Catalog.css'
 
 function CatalogItem(item) {
   const { addItem } = useContext(CartContext);
 
-  return (<div>
-    {item.name}
-    <button onClick={()=> addItem(item)}>Add to cart</button>
+  return (<div className="catalogItem">
+    <button className="catalogItemAdd" onClick={()=> addItem(item)}>Add</button>
+    <div className="catalogItemDescription">{item.name}</div>
   </div>)
 }
 

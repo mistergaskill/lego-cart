@@ -1,0 +1,14 @@
+.catalogItem {
+  display: flex;
+  border: 1px solid black;  
+  border-radius: 5px;
+  margin: 10px 20px;
+}
+
+.catalogItemAdd {
+  padding: 10px;
+  border-right: 1px solid black;  
+}
+.catalogItemDescription {
+  padding: 10px;
+}
